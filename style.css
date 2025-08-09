@@ -1,0 +1,264 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body com imagem e sombra */
+body {
+  background-image: url(WhatsApp\ Image\ 2025-07-27\ at\ 17.05.34\ \(4\).jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  color: #000000;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* sombra preta translúcida */
+  z-index: -1;
+}
+
+/* Galeria de fotos */
+.fotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.fotos img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* mantém proporção e preenche sem distorcer */
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8),
+              0 2px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fotos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+}
+
+/* Menu */
+.menu {
+  background-color: rgba(255, 105, 180, 0.85);
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #fff0f5;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffe6f0;
+}
+
+/* Cartões */
+.card {
+  background: rgba(255, 228, 235, 0.95);
+  padding: 40px 30px;
+  max-width: 800px;
+  margin: 80px auto;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(255, 105, 180, 0.25);
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.card h1, .card h2 {
+  color: #ff4d6d;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #b33b5f;
+}
+
+/* Botão */
+button {
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff4d6d, #ff7fa2);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #e03e5d, #ff4d6d);
+  transform: scale(1.05);
+}
+
+/* Mensagem oculta */
+#mensagem-oculta {
+  margin-top: 20px;
+  color: #ff4d6d;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* Corações animados */
+.coracoes-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.coracao {
+  position: absolute;
+  color: pink;
+  font-size: 24px;
+  animation: flutuar 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Caixa romântica */
+.tempo-romantico {
+  background: linear-gradient(135deg, #ffe6f0, #ffd6e6);
+  border: 3px solid #ff99cc;
+  border-radius: 25px;
+  padding: 40px 30px;
+  margin: 50px auto;
+  width: 95%;
+  max-width: 650px;
+  text-align: center;
+  box-shadow: 0 0 20px #ffcce6;
+  animation: flutuar-caixa 4s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.tempo-romantico::before,
+.tempo-romantico::after {
+  content: "💖";
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.08;
+}
+
+.tempo-romantico::before {
+  top: 10px;
+  left: 20px;
+}
+
+.tempo-romantico::after {
+  bottom: 10px;
+  right: 20px;
+}
+
+.tempo-romantico h2 {
+  font-family: 'Segoe Script', cursive;
+  font-size: 2rem;
+  color: #e60073;
+  margin-bottom: 20px;
+}
+
+#contador-amor {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #cc0066;
+  text-shadow: 1px 1px 2px white;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flutuar-caixa {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    margin: 40px 20px;
+    padding: 30px 20px;
+  }
+
+  .fotos {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .fotos img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
