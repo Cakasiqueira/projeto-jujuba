@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para a mulher da minha vida 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <audio id="bg-music" src="audio.mp3" autoplay loop></audio>
+
+  <!-- MENU -->
+  <nav class="menu">
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#historia">Nossa História</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <!-- CORAÇÕES -->
+  <div class="coracoes-container"></div>
+
+  <!-- INÍCIO -->
+  <section id="inicio" class="card">
+    <h1>Jujuba, minha vida! ❤️</h1>
+    <p>
+      Desde que você entrou na minha vida, tudo ficou mais bonito...<br/>
+      Eu te amo com todo o meu coração. 💌
+    </p>
+    <button id="surpresa">Clique aqui, meu amor!</button>
+    <p id="mensagem-oculta"></p>
+  </section>
+
+  <!-- HISTÓRIA -->
+
+  <!-- GALERIA -->
+  <section id="galeria" class="card galeria">
+    <h2>📸 Nossos Momentos</h2>
+    <div class="fotos">
+      <img src="WhatsApp Image 2025-07-27 at 17.05.34 (2).jpeg" alt="Foto 1">
+      <img src="WhatsApp Image 2025-07-27 at 17.05.33.jpeg" alt="Foto 2">
+      <img src="WhatsApp Image 2025-07-27 at 17.05.34 (3).jpeg" alt="Foto 3">
+      <img src="WhatsApp Image 2025-07-27 at 17.05.34 (1).jpeg" alt="Foto 4">
+      <img src="WhatsApp Image 2025-07-27 at 17.05.34.jpeg" alt="Foto 5">
+      <img src="WhatsApp Image 2025-07-27 at 17.05.34 (4).jpeg" alt="Foto 7">
+    </div>
+  </section>
+
+<section id="historia" class="card historia">
+  <h2>💌 Nossa História</h2>
+  <p>
+    Amor, olha só… tudo começou de um jeito nada planejado. Um dia, do nada, te mandei uma mensagem no Instagram perguntando se você tinha o link do seu teclado pra me mandar. Até hoje não sei se foi coragem ou só uma desculpa mal feita, mas sei que foi a melhor mensagem que já enviei.<br/><br/>
+    Desde aquele dia, a gente nunca mais parou de se falar. Nossa conexão cresceu tão rápido que parecia que já nos conhecíamos há anos. E aí, numa madrugada, não aguentei guardar só pra mim e escrevi um texto falando o quanto você era especial pra mim.<br/><br/>
+    E então veio o domingo… nosso primeiro encontro. Fomos ao shopping com a sua família, tomamos sorvete, tiramos várias fotos, e teve aquele momento fofo de eu te dar sorvete na boca pra você cuidar da sua sobrinha/prima (nunca lembro pque é, ksksks). Mas também teve a parte “emocionante”: levei um tapa na cara. Mas relaxa… foi aquele tapa carinhoso, sabe? Do tipo “você é besta, mas eu gosto de você”.<br/><br/>
+    Foi um dia simples, mas especial. Porque no fim, não importa se tudo começou com um pedido de link de teclado ou com um tapa no shopping… o que importa é que, desde o começo, tudo com você tem sido único e incrível pra mim.
+  </p>
+</section>
+
+<section id="tempo" class="tempo-romantico">
+  <h2>❤️ Eu te amo há:</h2>
+  <p id="contador-amor">Carregando...</p>
+
+  <!-- Player do SoundCloud incorporado -->
+  <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-79781816/ed-sheeran-perfect-official-audio&color=%23ff2e63&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
+  </iframe> 
+</section>
+
+
+
+
+<script>
+  document.getElementById('surpresa').addEventListener('click', () => {
+    const mensagem = document.getElementById('mensagem-oculta');
+    mensagem.textContent = "Olhe para mim";
+  });
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
